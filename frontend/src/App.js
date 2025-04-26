@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { StoreProvider } from './context/StoreContext';
-import Layout from './components/Layout/Layout';
+// import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/Auth/LoginPage';
 import RegisterPage from './pages/Auth/RegisterPage';
@@ -23,7 +23,7 @@ function App() {
   return (
     <AuthProvider>
       <StoreProvider>
-        <Layout>
+        {/* <Layout> */}
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<HomePage />} />
@@ -51,7 +51,7 @@ function App() {
               <Route path="/owner/dashboard" element={<OwnerDashboardPage />} />
             </Route>
           </Routes>
-        </Layout>
+        {/* </Layout> */}
       </StoreProvider>
     </AuthProvider>
   );
